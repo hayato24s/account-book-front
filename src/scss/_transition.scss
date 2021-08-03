@@ -1,0 +1,27 @@
+// fade
+.fade-leave-active {
+  transition: $transition-all;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+//  toast
+.toast-enter-from,
+.toast-leave-to {
+  // transform: scale(0.5);
+  opacity: 0;
+}
+
+.toast-enter-to,
+.toast-leave-from {
+  // transform: scale(1);
+  opacity: 1;
+}
+
+.toast-enter-active,
+.toast-leave-active {
+  transition: $transition-all;
+}

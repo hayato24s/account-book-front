@@ -1,0 +1,50 @@
+@mixin button-cursor {
+  user-select: none;
+  cursor: pointer;
+}
+
+@mixin field-active {
+  background: $selected;
+}
+
+// 1rem以下のfont-sizeを指定
+// $font-size: remで指定
+@mixin small-font($font-size: 1) {
+  font-size: $font-x-small;
+  transform: scale($font-size);
+}
+
+@mixin height-and-line-height($height) {
+  height: $height;
+  line-height: $height;
+}
+
+@mixin center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin center-fixed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin re-calculate-flex-height {
+  flex: 1 1 auto;
+  height: 0;
+}
+
+@mixin tab-and-pc {
+  @media screen and (min-width: $tab-and-pc-width) {
+    @content;
+  }
+}
